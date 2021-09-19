@@ -1,5 +1,5 @@
 ({
-    name: "Ultrasonic", // Category Name
+    name: "Ultrasonic Custom Pin", // Category Name
     description: "Attach your HC-SR04 to custom Pin",
     author: "javanesse.net",
     category: "Sensors",
@@ -10,8 +10,16 @@
         {
             xml: `
                 <block type="ultrasonic_read">
-                    <field name="trig">22</field>
-                    <field name="echo">23</field>
+				    <value name="trig">
+                        <shadow type="math_number">
+                            <field name="NUM">22</field>
+                        </shadow>
+                    </value>
+					<value name="echo">
+                        <shadow type="math_number">
+                            <field name="NUM">23</field>
+                        </shadow>
+                    </value>
                 </block>
             `
         }
