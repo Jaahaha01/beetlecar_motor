@@ -1,27 +1,72 @@
 ({
-    name: "Ultrasonic Custom Pin", // Category Name
-    description: "Attach your HC-SR04 to custom Pin",
-    author: "javanesse.net",
-    category: "Sensors",
-    version: "1.0.1",
+    name: "beetlecar_motor", // Category Name
+    description: "",
+    author: "Phatcharapon",
+    category: "Controller",
+    version: "1.0.0",
     icon: "/static/icon.png", // Category icon
     color: "#004098", // Category color (recommend some blocks color)
     blocks: [ // Blocks in Category
-        {
-            xml: `
-                <block type="ultrasonic_read">
-				    <value name="trig">
-                        <shadow type="math_number">
-                            <field name="NUM">22</field>
-                        </shadow>
-                    </value>
-					<value name="echo">
-                        <shadow type="math_number">
-                            <field name="NUM">23</field>
-                        </shadow>
-                    </value>
-                </block>
-            `
-        }
+        "stopMotor",
+                        {
+                            xml: `
+                                <block type="Forward">
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="Backward">
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="Left">
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="Right">
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="moveAward">
+                                    <field name="moveAward">0</field>
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="moveBack">
+                                    <field name="moveBack">0</field>
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="moveLeft">
+                                    <field name="moveLeft">0</field>
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
+                        {
+                            xml: `
+                                <block type="moveRight">
+                                    <field name="moveRight">0</field>
+                                    <field name="speed">0</field>
+                                </block>
+                            `
+                        },
     ]
 });
